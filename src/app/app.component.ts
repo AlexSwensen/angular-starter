@@ -33,11 +33,12 @@ export class AppComponent {
 
 
   submitClicked(event) {
+    console.log('submitClicked', event);
     this.list.push(this.inputText);
   }
 
-  cancelClicked(event) {
-    console.log('cancel', event);
+  delete(index) {
+    this.list.splice(index, 1);
   }
 
 }
